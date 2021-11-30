@@ -1,0 +1,457 @@
+@import 'base/reset';
+@import 'base/var';
+@import 'mixin/modules';
+
+section {
+  background-color: map-get($color, mainyellow);
+}
+
+.money .lanternL,
+.money .lanternR {
+  display: none;
+}
+
+.money .moneyBox .img {
+  display: none;
+}
+
+.money {
+  @include flexCenter();
+  margin-top: 40px;
+  padding-top: 10px;
+
+}
+
+.money .moneyBox img {
+  width: 100%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.money .moneyBox {
+  @include flexCenter();
+  flex-direction: column;
+}
+
+.money .moneyBox h1 {
+  font-family: RocknRollOne, serif;
+  font-size: map-get($fontSize, webh2);
+  color: map-get($color, darkbrown);
+  line-height: 40px;
+}
+
+.money .moneyBox p {
+  font-family: NotoSansTC, serif;
+  font-weight: map-get($fontWeight, pWeight);
+  font-size: map-get($fontSize, weblp);
+  color: map-get($color, darkbrown);
+  line-height: 40px;
+  margin-top: 2px;
+}
+
+
+.money .moneyBox .miniImg {
+  margin-top: 10px;
+  width: 320px;
+  height: 166px;
+}
+
+.money .moneyBox img {
+  width: 100%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.money .moneyBox #app .moneyBoxBtn {
+  @include btnMini();
+  font-family: NotoSansTC, serif;
+  font-weight: map-get($fontWeight, subTitleWeight);
+  margin-top: 11px;
+}
+
+#app .inputboxmoney {
+  @include jumpBg();
+}
+
+::placeholder {
+  font-family: NotoSansTC, serif;
+  color: map-get($color, placeholder);
+}
+
+#app .inputboxmoneywin {
+  @include smallBorderR;
+  background-color: #fff;
+  width: 300px;
+  height: 235px;
+  position: relative;
+  left: calc(50% - 150px);
+  top: calc(50% - 117.5px);
+  border: 1px solid map-get($color, lightbrown);
+}
+
+#app .inputboxmoneywin h3 {
+  font-size: map-get($fontSize, weblp);
+  color: map-get($color, darkbrown);
+  font-family: NotoSansTC, serif;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+#app .inputboxmoneywin .btn {
+  @include smallBorderR;
+  font-size: map-get($fontSize, weblp);
+  font-weight: map-get($fontWeight, pWeight);
+  color: map-get($color, darkbrown);
+  font-family: NotoSansTC, serif;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#app .inputboxmoneywin #inputwin {
+  font-size: map-get($fontSize, weblp);
+  font-weight: map-get($fontWeight, pWeight);
+  color: map-get($color, darkbrown);
+  font-family: NotoSansTC, serif;
+  margin-top: 45px;
+  text-align: center
+}
+
+#app .inputboxmoneywin #inputwin input {
+  @include smallBorderR;
+  font-size: map-get($fontSize, weblp);
+  font-weight: map-get($fontWeight, pWeight);
+  color: map-get($color, darkbrown);
+  font-family: NotoSansTC, serif;
+  border: 1px solid map-get($color, lightbrown);
+  background-color: map-get($color, mainyellow);
+  width: 170px;
+  padding-left: 15px;
+}
+
+#app .inputboxmoneywin .btn button {
+  @include btnlocal();
+  font-family: NotoSansTC, serif;
+}
+
+//信用卡付款
+#app .creditcard {
+  @include smallBorderR;
+  background-color: #fff;
+  width: 300px;
+  height: 375px;
+  position: relative;
+  left: calc(50% - 150px);
+  top: calc(50% - 187.5px);
+  border: 1px solid map-get($color, lightbrown);
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+#app .creditcard h3 {
+  font-size: map-get($fontSize, weblp);
+  color: map-get($color, darkbrown);
+  font-family: NotoSansTC, serif;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+#app .creditcard p {
+  font-size: map-get($fontSize, navfont);
+  color: map-get($color, darkbrown);
+  font-family: NotoSansTC, serif;
+  text-align: left;
+  line-height: 30px;
+}
+
+#app .creditcard ul li {
+  font-size: map-get($fontSize, navfont);
+  display: flex;
+  justify-content: space-between;
+  line-height: 40px;
+  padding: 6px 0;
+  align-items: center;
+}
+
+#app .creditcard #creditcardmoney {
+  width: 189px;
+}
+
+#app .creditcard .cardinfo {
+  @include smallBorderR;
+  font-size: map-get($fontSize, weblp);
+  font-weight: map-get($fontWeight, pWeight);
+  color: map-get($color, darkbrown);
+  font-family: NotoSansTC, serif;
+  text-align: left;
+}
+
+#app .creditcard .cardinfo input {
+  @include smallBorderR;
+  font-size: map-get($fontSize, navfont);
+  font-weight: map-get($fontWeight, pWeight);
+  color: map-get($color, darkbrown);
+  font-family: NotoSansTC, serif;
+  border: 1px solid map-get($color, lightbrown);
+  background-color: map-get($color, mainyellow);
+  width: 170px;
+
+  padding-left: 15px;
+}
+
+#app .creditcard .cardinfo ul li:nth-child(3) label {
+  display: flex;
+  flex-grow: 1;
+}
+
+#app .creditcard .cardinfo ul li:nth-child(3) input {
+  box-sizing: border-box;
+  width: 189px;
+
+}
+
+#app .creditcard .btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#app .creditcard button {
+  @include btnlocal();
+  font-family: NotoSansTC, serif;
+}
+
+#app .creditcard .cardinfo ul li:nth-child(4) label:first-child {
+  display: flex;
+  flex-grow: 1;
+  max-width: 99px;
+}
+
+#app .creditcard .cardinfo ul li:nth-child(4) .safetitle {
+  padding: 0px 5px;
+}
+
+
+#app .creditcard .cardinfo ul li:nth-child(4) {
+  @include flexCenter();
+  justify-content: flex-start;
+}
+
+#app .creditcard .cardinfo ul li:nth-child(4) input {
+  box-sizing: border-box;
+  width: 65px;
+  height: 30px;
+  padding-left: 5px;
+}
+
+#app .creditcard .cardinfo ul li:nth-child(4) ::placeholder {
+  font-size: map-get($fontSize, minifont);
+}
+
+@include phone() {
+  .money {
+    margin-top: 40px;
+    padding-bottom: 76px;
+  }
+
+  .money .moneyBox p {
+    margin-top: 11px;
+    font-weight: map-get($fontWeight, subTitleWeight);
+  }
+
+  .money .moneyBox .miniImg {
+    width: 375px;
+    height: 196px;
+    margin-top: 104px;
+  }
+
+  #app .inputboxmoneywin {
+    width: 335px;
+    height: 235px;
+    left: calc(50% - 167.5px);
+    top: calc(50% - 117.5px);
+  }
+}
+
+@include tabletV() {
+  .money {
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .money .lanternL {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 130px;
+  }
+
+  .money .lanternR {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 130px;
+  }
+
+  .money .lanternL img,
+  .money .lanternR img {
+    width: 100%
+  }
+
+  #app .inputboxmoneywin {
+    width: 350px;
+    height: 250px;
+    left: calc(50% - 175px);
+    top: calc(50% - 125px);
+  }
+
+  #app .inputboxmoneywin h3 {
+    margin-top: 40px;
+  }
+
+  #app .inputboxmoneywin .btn {
+    margin-top: 40px;
+  }
+}
+
+@include tabletH() {
+  .money {
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .money .lanternL {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 140px;
+  }
+
+  .money .lanternR {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    width: 140px;
+  }
+
+  .money .lanternL img,
+  .money .lanternR img {
+    width: 100%
+  }
+
+  #app .inputboxmoneywin {
+    width: 500px;
+    height: 260px;
+    left: calc(50% - 250px);
+    top: calc(50% - 130px);
+  }
+
+  #app .inputboxmoneywin h3 {
+    font-size: map-get($fontSize, webp);
+    margin-top: 45px;
+  }
+
+  #app .inputboxmoneywin .btn {
+    font-size: map-get($fontSize, weblp);
+    margin-top: 50px;
+  }
+}
+
+@include laptop() {
+  .money {
+    @include maxWidth();
+    margin-top: 60px;
+    position: relative;
+  }
+
+  .money .moneyBox .miniImg {
+    display: none;
+  }
+
+  .money .lanternL {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+  }
+
+  .money .lanternR {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 220px;
+  }
+
+  .money .lanternL img,
+  .money .lanternR img {
+    width: 100%
+  }
+
+  .money .moneyBox .img {
+    display: block;
+    margin-top: 87px;
+    width: 824px;
+    height: 430px;
+  }
+
+  .money .moneyBox h1 {
+    font-size: map-get($fontSize, webh1);
+    margin-top: 60px;
+  }
+
+  .money .moneyBox p {
+    font-size: map-get($fontSize, webp);
+    margin-top: 20px;
+    font-weight: map-get($fontWeight, subTitleWeight);
+  }
+
+  .money .moneyBox #app .moneyBoxBtn {
+    @include btnMainPage();
+    font-family: NotoSansTC, serif;
+    font-size: map-get($fontSize, webp);
+    font-weight: map-get($fontWeight, subTitleWeight);
+    position: absolute;
+    right: calc(50% - 100px);
+    bottom: 25%;
+  }
+
+  #app .inputboxmoneywin {
+    width: 600px;
+    height: 275px;
+    position: relative;
+    left: calc(50% - 300px);
+    top: calc(50% - 137.5px);
+  }
+
+  #app .inputboxmoneywin h3 {
+    font-size: map-get($fontSize, webh3);
+    margin-top: 30px;
+  }
+
+  #app .inputboxmoneywin p {
+    font-size: map-get($fontSize, weblp);
+  }
+
+  #app .inputboxmoneywin #inputwin {
+    font-size: map-get($fontSize, weblp);
+    color: map-get($color, darkbrown);
+    margin-top: 40px;
+  }
+
+  #app .inputboxmoneywin #inputwin input {
+    font-size: map-get($fontSize, weblp);
+    width: 400px;
+    height: 40px;
+    padding-left: 20px;
+  }
+
+  #app .inputboxmoneywin .btn button {
+    @include btnlocal();
+    font-family: NotoSansTC, serif;
+  }
+}
